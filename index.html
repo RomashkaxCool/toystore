@@ -20,10 +20,23 @@
       </div>
 
       <div class="cart">
-        <a href="#">🛒 Кошик (0)</a>
+        <button id="openCart">
+          <img src="img/shopping-cart.png" alt="">
+        </button>
+      </div>
+    </div>
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ваш кошик</h2>
+        <ul id="cartItems">
+
+        </ul>
+        <button id="checkout">Оформити замовлення</button>
       </div>
     </div>
   </header>
+
   <main>
 
     <div class="container" id="product-list">
@@ -36,4 +49,5 @@
   </footer>
 </body>
 <script src="js/app.js"></script>
+<script src="js/cart.js"></script>
 </html>
