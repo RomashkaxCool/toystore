@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Магазин іграшок</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -15,34 +14,37 @@
     </div>
     <div class="bottom-header">
       <div class="search">
-        <input type="text" placeholder="Пошук...">
-        <button>🔍</button>
+        <input type="text" id="searchInput" placeholder="Пошук за назвою...">
       </div>
-
       <div class="cart">
         <button id="openCart">
           <img src="img/shopping-cart.png" alt="">
         </button>
       </div>
     </div>
-    <div id="cartModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Ваш кошик</h2>
-        <ul id="cartItems">
 
-        </ul>
-        <button id="checkout">Оформити замовлення</button>
-      </div>
-    </div>
   </header>
 
   <main>
-
+    <div class="filter">
+    <label for="ageFilter">Фільтр за віком:</label>
+    <select id="ageFilter">
+      <option value="all">Всі</option>
+    </select>
+    </div>
     <div class="container" id="product-list">
     </div>
 
   </main>
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ваш кошик</h2>
+      <ul id="cartItems"></ul>
+      <p id="totalPrice">Загальна сума: 0.00 грн</p>
+      <button class="button_order" id="checkout">Оформити замовлення</button>
+    </div>
+  </div>
 
   <footer>
 

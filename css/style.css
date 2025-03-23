@@ -2,27 +2,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
   background: #d1ab96;
-  margin: 0;
 }
-header{
+header {
   background: #ffceb4;
-  padding: 15px 0;
-  text-align: center;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 .top-header {
   background: #ffb197;
-  padding: 5px 0;
-  margin-top: 0;
+  padding: 3px 0;
   font-size: 14px;
   color: #fff;
-
 }
 .bottom-header {
   display: flex;
@@ -30,23 +27,26 @@ header{
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 8px 20px;
+}
+/* Стилі для поля пошуку */
+.search {
+  display: flex;
+  justify-content: center; /* Вирівнює елементи по центру */
+  align-items: center; /* Вирівнює по вертикалі */
+  margin: 20px auto; /* Додає відступ зверху і автоматично центрує по горизонталі */
+  width: 100%; /* Робить блок на всю ширину */
 }
 
-.search input {
-  padding: 10px;
+#searchInput {
+  padding: 8px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 10px;
 }
 
-.search button {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
 .cart {
   font-size: 18px;
   color: #333;
@@ -149,4 +149,106 @@ button{
   float: right;
   font-size: 24px;
   cursor: pointer;
+}
+.button_order{
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.button_order:hover{
+  background: #eca27d;
+  transform: scale(1.05);
+}
+.button_order:active{
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Стилі для фільтра за віковими категоріями */
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#ageFilter {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #ffceb4;
+  transition: border 0.3s ease;
+}
+
+#ageFilter:hover {
+  border-color: #ffb200;
+}
+
+#ageFilter:focus {
+  outline: none;
+  border-color: #ffb200;
+}
+
+/* Випадаючий список */
+option {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.filter{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+}
+.auth-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.auth-menu button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+.auth-menu button:hover {
+  background-color: #0056b3;
+}
+
+/* Випадаюче меню */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f1f1f1;
 }
